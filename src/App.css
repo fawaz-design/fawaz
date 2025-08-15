@@ -1,0 +1,84 @@
+
+.app-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1rem 0 1rem;
+  min-height: 100vh;
+  background: #f8fafc;
+  box-sizing: border-box;
+}
+
+.app-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.brand-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2563eb;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.main-nav {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.main-nav a {
+  color: #1e293b;
+  text-decoration: none;
+  padding: 0.25em 0.5em;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.main-nav a:hover, .main-nav a.active {
+  color: #fff;
+  background: #2563eb;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  margin-bottom: 2rem;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 2rem 0 1rem 0;
+  color: #64748b;
+  font-size: 1rem;
+  background: none;
+}
+
+@media (max-width: 900px) {
+  .app-container {
+    padding: 1rem 0.5rem 0 0.5rem;
+  }
+  .product-grid {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .brand-title {
+    font-size: 1.5rem;
+  }
+  .main-nav {
+    gap: 1rem;
+    font-size: 1rem;
+  }
+  .app-header {
+    margin-bottom: 1rem;
+  }
+  .app-footer {
+    font-size: 0.9rem;
+    padding: 1rem 0 0.5rem 0;
+  }
+}
